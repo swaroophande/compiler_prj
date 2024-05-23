@@ -1,0 +1,16 @@
+S' -> S
+S -> BEGIN stmts END
+stmts -> print stmts
+stmts -> decleration stmts
+stmts -> for_loop stmts
+stmts -> assignment stmts
+stmts -> ''
+print -> PF DQ STRING DQ
+decleration -> DATATYPE IDEN dlist
+dlist -> COMMA IDEN dlist
+dlist -> ''
+for_loop -> FOR_LOOP IDEN ASSIGN_OP NUM TO NUM
+assignment -> IDEN ASSIGN_OP list
+list -> NUM 
+list -> REAL
+list -> DQ STRING DQ
